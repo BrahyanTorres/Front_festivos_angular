@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .mat-form-field {
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  .custom-toolbar{
+    background-color: brown;
+}
+.centrar{
+    text-align: center; /* Centrar horizontalmente */
+    display: flex; /* Utilizamos flexbox para centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente con flexbox */
+    width: 100%; /* Ancho completo */
+    font-size: large;
+    font-size: 40px;
+    font-weight: bold;
+    color: blanchedalmond;
+    
+}
+.centrar2{
+  text-align: center; /* Centrar horizontalmente */
+  display: flex; /* Utilizamos flexbox para centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente con flexbox */
+  width: 100%; /* Ancho completo */
+  font-size: 15px;
+  font-weight:lighter;
+  color: rgb(0, 0, 0);
+  
+}
+
+/* Agrega cualquier estilo adicional aquí */
+
+mat-card {
+    margin: 20px;
+  }
+  
+  mat-toolbar {
+    margin-bottom: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  .full-width-card {
+    width: 100%;
+  }
+  

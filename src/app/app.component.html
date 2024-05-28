@@ -1,0 +1,50 @@
+<mat-toolbar class="custom-toolbar">
+  <div class="centrar">
+    CONSULTA FESTIVOS
+  </div>
+</mat-toolbar>
+
+
+<div class="container">
+   SELECCIONE EL AÑO
+  <mat-form-field appearance="fill">
+    <mat-label>Año</mat-label>
+    <input type="number" matInput [(ngModel)]="year">
+  </mat-form-field>
+  <button mat-raised-button color="warner" (click)="getHolidays()">Obtener Festivos</button>
+</div>
+
+<div *ngIf="holidays.length > 0" class="container">
+  <ul>
+    <li *ngFor="let holiday of holidays">
+      {{ holiday.date }} - {{ holiday.localName }}
+    </li>
+  </ul>
+</div>
+<br>
+<div *ngIf="holidays.length === 0" class="container">
+
+  <p>No se encontraron festivos para el año {{ year }}</p>
+</div>
+<mat-divider style="background-color: black;"></mat-divider>
+
+<div class="container">
+  VERIFIQUE LA FECHA
+  <mat-form-field>
+    <mat-label>Seleccionar fecha</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="fechaSeleccionada">
+               <mat-hint>YYYY/MM/DD</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="validarFecha()">Validar fecha</button>
+  <div *ngIf="mensajeValidacion">
+    <br>
+    <p>{{ mensajeValidacion }}</p>
+  </div>
+</div>
+<br>
+<mat-divider style="background-color: black;"></mat-divider>
+<br>
+
+<p class="centrar2">DESARROLLO DE SOFTWARE</p>
